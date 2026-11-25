@@ -1,0 +1,1295 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Учебный центр ИКЦ</title>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9ItCY0JrQpiI+PHJlY3Qgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMjAiIHJ4PSIyNiIgZmlsbD0iIzE2NjBDNCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0IDE0KSBzY2FsZSgwLjg4KSI+PHBvbHlnb24gcG9pbnRzPSIwLDUwIDUwLDAgNTAsNTAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zLjIgLTMuMikiIGZpbGw9IiNGRkZGRkYiLz48cG9seWdvbiBwb2ludHM9IjUwLDAgMTAwLDUwIDUwLDUwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzLjIgLTMuMikiIGZpbGw9IiNGRkZGRkYiLz48cG9seWdvbiBwb2ludHM9IjAsNTAgNTAsMTAwIDUwLDUwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMy4yIDMuMikiIGZpbGw9IiNGRkZGRkYiLz48cG9seWdvbiBwb2ludHM9IjUwLDUwIDEwMCw1MCA1MCwxMDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDguMiA4LjIpIiBmaWxsPSIjRTYzQjJFIi8+PC9nPjwvc3ZnPg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@500;700&family=Manrope:wght@700;800&family=Oswald:wght@500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: sticky header → deep-blue hero with sample certificate → facts strip → filterable catalog → reasons → enquiry form → two branch cards → footer with legal info */
+:root{
+  --bg:#F4F6F9; --surface:#FFFFFF; --ink:#0E2135; --muted:#56677B; --line:#D9E1EA;
+  --brand:#1559A8; --brand-soft:#E5EEF8; --brand-ink:#FFFFFF;
+  --hero:#0D3A6E; --hero-ink:#FFFFFF; --hero-muted:#B9CDE6;
+  --signal:#F5B800; --signal-ink:#17140A;
+  --paper:#FBF8EE; --paper-ink:#2A2A2A; --stamp:#2B5DB8;
+  --ok:#1E7F4F;
+  --hdr:var(--hero); --hdr-ink:#FFFFFF; --hdr-muted:#B9CDE6;
+  --display:"Unbounded","Golos Text",system-ui,sans-serif;
+  --body:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --r:10px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0A1520; --surface:#111F2E; --ink:#E6EDF5; --muted:#93A4B7; --line:#22364B;
+    --brand:#5A9BEA; --brand-soft:#15304D; --brand-ink:#08121C;
+    --hero:#0C2744; --hero-ink:#F2F6FB; --hero-muted:#9DB5D3;
+    --signal:#FFC62E; --signal-ink:#17140A;
+    --paper:#EDE8D8; --paper-ink:#262626; --stamp:#2B5DB8; --ok:#4CC28A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0A1520; --surface:#111F2E; --ink:#E6EDF5; --muted:#93A4B7; --line:#22364B;
+  --brand:#5A9BEA; --brand-soft:#15304D; --brand-ink:#08121C;
+  --hero:#0C2744; --hero-ink:#F2F6FB; --hero-muted:#9DB5D3;
+  --signal:#FFC62E; --signal-ink:#17140A;
+  --paper:#EDE8D8; --paper-ink:#262626; --stamp:#2B5DB8; --ok:#4CC28A;
+  color-scheme:dark;
+}
+/* Версия для слабовидящих */
+html.a11y:root:not(#_){
+  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#000000; --muted:#000000; --line:#000000;
+  --brand:#002C6B; --brand-soft:#FFFFFF; --brand-ink:#FFFFFF;
+  --hero:#FFFFFF; --hero-ink:#000000; --hero-muted:#000000;
+  --signal:#002C6B; --signal-ink:#FFFFFF; --ok:#000000;
+  --hdr:#002C6B; --hdr-ink:#FFFFFF; --hdr-muted:#FFFFFF;
+  color-scheme:light; font-size:125%;
+}
+html.a11y .cert{display:none}
+html.a11y .hero{border-bottom:3px solid var(--ink)}
+html.a11y .hdr .btn-signal{border-color:#FFFFFF}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.55 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:var(--brand)}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:20px}
+.mono{font-family:var(--mono);font-size:.82em;letter-spacing:.02em}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.section{padding-block:72px}
+.section-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px 32px;margin-bottom:32px}
+.section-head h2{font:700 clamp(1.5rem,3vw,2.1rem)/1.15 var(--display);letter-spacing:-.01em;max-width:22ch}
+.section-head p{color:var(--muted);max-width:52ch}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:8px;border:1.5px solid transparent;font-weight:600;cursor:pointer;text-decoration:none;white-space:nowrap;transition:transform .15s, background .15s}
+.btn:active{transform:translateY(1px)}
+.btn-signal{background:var(--signal);color:var(--signal-ink)}
+.btn-signal:hover{filter:brightness(1.05)}
+.btn-brand{background:var(--brand);color:var(--brand-ink)}
+.btn-ghost{background:transparent;border-color:currentColor;color:inherit}
+.btn-sm{min-height:38px;padding:0 14px;font-size:.92rem}
+
+/* Prototype ribbon */
+.proto{background:var(--signal);color:var(--signal-ink);font-size:.82rem;text-align:center;padding:6px 16px}
+
+/* Header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--hdr);color:var(--hdr-ink);border-bottom:1px solid color-mix(in srgb,var(--hdr-ink) 14%,transparent)}
+.hdr .wrap{display:flex;align-items:center;gap:20px;min-height:76px}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;border-radius:6px}
+.logo svg{height:54px;width:auto;display:block}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{padding:8px 10px;border-radius:6px;color:var(--hdr-ink);text-decoration:none;font-weight:500;font-size:.95rem}
+.nav a:hover{background:color-mix(in srgb,var(--hdr-ink) 12%,transparent)}
+.hdr-tools{display:flex;align-items:center;gap:12px}
+.hdr-phone{display:grid;line-height:1.2;text-align:right;font-variant-numeric:tabular-nums}
+.hdr-phone b{font-weight:600;white-space:nowrap}
+.hdr-phone span{font-size:.75rem;color:var(--hdr-muted)}
+.icon-btn{width:42px;height:42px;display:grid;place-items:center;border-radius:8px;border:1px solid var(--line);background:var(--surface);cursor:pointer;color:var(--ink)}
+.icon-btn[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.hdr .icon-btn{background:transparent;color:var(--hdr-ink);border-color:color-mix(in srgb,var(--hdr-ink) 30%,transparent)}
+.hdr .icon-btn[aria-pressed="true"]{background:var(--hdr-ink);color:var(--hdr)}
+.burger{display:none}
+.nav a,.hdr-phone span{white-space:nowrap}
+@media (max-width:1380px){.hdr-phone{display:none}}
+.nav .nav-sveden{display:none}
+@media (max-width:1200px){
+  .nav .nav-sveden{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--hdr);border-bottom:1px solid color-mix(in srgb,var(--hdr-ink) 14%,transparent);padding:8px 20px 16px}
+  .nav.open{display:flex}
+  .burger{display:grid}
+  .hdr-phone{display:none}
+  .hdr-tools{margin-left:auto}
+}
+@media (max-width:520px){ .hdr-tools .btn{display:none} .logo svg{height:46px} }
+
+/* Hero */
+.hero{background:var(--hero);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:repeating-linear-gradient(-45deg,var(--signal) 0 14px,var(--hero) 14px 28px);opacity:.9}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:center;padding-block:52px 80px}
+.hero .eyebrow{color:var(--hero-muted)}
+.hero h1{font:700 clamp(1.4rem,3.6vw,2.8rem)/1.1 var(--display);hyphens:manual;overflow-wrap:anywhere;letter-spacing:-.02em;margin-block:14px 18px}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.hero-lead{color:var(--hero-muted);font-size:1.08rem;max-width:54ch}
+.search{margin-top:28px;display:flex;gap:8px;background:var(--surface);border-radius:10px;padding:6px;max-width:580px}
+.search input{flex:1;min-width:0;border:0;background:transparent;padding:0 12px;font-size:1rem;color:var(--ink)}
+.search input::placeholder{color:var(--muted)}
+.search input:focus{outline:none}
+.search:focus-within{box-shadow:0 0 0 3px var(--signal)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{border:1px solid color-mix(in srgb,var(--hero-ink) 30%,transparent);background:transparent;color:var(--hero-ink);border-radius:999px;padding:5px 12px;font-size:.85rem;cursor:pointer}
+.chip:hover{background:color-mix(in srgb,var(--hero-ink) 12%,transparent)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+/* Sample certificate */
+.cert{justify-self:center;width:100%;max-width:400px;background:var(--paper);color:var(--paper-ink);border-radius:6px;padding:22px 22px 18px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);transform:rotate(2.2deg);position:relative;font-size:.8rem}
+.cert::before{content:"ОБРАЗЕЦ";position:absolute;inset:0;display:grid;place-items:center;font:700 3.2rem var(--display);color:rgba(200,40,40,.10);transform:rotate(-24deg);pointer-events:none}
+.cert-top{display:flex;justify-content:space-between;align-items:start;gap:12px;border-bottom:1px solid rgba(0,0,0,.18);padding-bottom:10px;margin-bottom:12px}
+.cert-top b{font:700 .95rem var(--display);letter-spacing:.04em}
+.cert-top .mono{color:#7a6c4a}
+.cert-title{font-weight:600;font-size:.86rem;margin-bottom:12px;line-height:1.35}
+.cert dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;margin:0}
+.cert dt{color:#6d6556}
+.cert dd{margin:0;font-weight:600;border-bottom:1px dotted rgba(0,0,0,.3)}
+.cert-foot{display:flex;justify-content:space-between;align-items:end;margin-top:16px}
+.stamp{width:78px;height:78px;border:2.5px solid var(--stamp);border-radius:50%;display:grid;place-items:center;color:var(--stamp);font:700 .7rem/1.1 var(--display);text-align:center;transform:rotate(-14deg);opacity:.85;box-shadow:inset 0 0 0 4px var(--paper),inset 0 0 0 5.5px var(--stamp)}
+.sign{font-family:var(--mono);color:#6d6556;font-size:.7rem}
+@media (max-width:900px){.hero .wrap{grid-template-columns:minmax(0,1fr);padding-block:40px 64px}.cert{max-width:340px;transform:rotate(1.5deg)}}
+
+/* Facts strip */
+.facts{background:var(--surface);border-bottom:1px solid var(--line)}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.facts li{padding:22px 20px;border-left:1px solid var(--line);display:grid;gap:4px}
+.facts li:first-child{border-left:0;padding-left:0}
+.facts b{font-weight:600}
+.facts span{color:var(--muted);font-size:.9rem}
+@media (max-width:900px){.facts ul{grid-template-columns:repeat(2,minmax(0,1fr))}.facts li{border-left:0;padding-inline:0 12px;border-top:1px solid var(--line)}.facts li:nth-child(-n+2){border-top:0}}
+@media (max-width:480px){.facts ul{grid-template-columns:1fr}.facts li:nth-child(2){border-top:1px solid var(--line)}}
+
+/* Catalog */
+.cats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:24px}
+.cat{display:flex;flex-direction:column;text-align:left;padding:0;overflow:hidden;border-radius:var(--r);border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;transition:border-color .15s,box-shadow .2s,transform .2s}
+.cat:hover{border-color:var(--brand);transform:translateY(-2px);box-shadow:0 18px 36px -24px rgba(11,31,58,.55)}
+.cat[aria-pressed="true"]{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.cat-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--hero)}
+.cat-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.cat:hover .cat-media img,.cat:hover .cat-ph svg{transform:scale(1.05)}
+.cat-ph{position:absolute;inset:0;background:
+  repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14px),
+  radial-gradient(120% 90% at 85% 100%,var(--brand) 0,transparent 60%),
+  linear-gradient(160deg,var(--hero),#06213F)}
+.cat-ph svg{position:absolute;right:6%;bottom:-8%;width:52%;height:auto;color:rgba(255,255,255,.22);stroke-width:1.1;transition:transform .4s}
+.cat-ph::before{content:"";position:absolute;left:0;top:0;width:6px;height:100%;background:var(--signal)}
+.cat-ph i{position:absolute;left:18px;right:46%;bottom:14px;font-style:normal;font-size:.74rem;line-height:1.35;color:#C9D8EC}
+.cat-ph i::before{content:"ФОТО";display:block;font:600 .62rem/1 var(--mono);letter-spacing:.12em;color:var(--signal);margin-bottom:5px}
+.cat-n{position:absolute;top:12px;right:12px;padding:4px 10px;border-radius:999px;background:rgba(6,20,38,.72);color:#FFFFFF;font-size:.78rem;font-weight:600;font-variant-numeric:tabular-nums;backdrop-filter:blur(4px)}
+.cat-body{display:grid;gap:8px;padding:16px 18px 18px;flex:1;align-content:start}
+.cat b{font-family:var(--display);font-weight:600;font-size:1.02rem;line-height:1.25}
+.cat-d{display:block;color:var(--muted);font-size:.9rem;line-height:1.45}
+.cat-go{margin-top:auto;padding-top:6px;font-weight:600;font-size:.9rem;color:var(--brand)}
+.cat[aria-pressed="true"] .cat-go{font-size:0}.cat[aria-pressed="true"] .cat-go::after{content:"✓ Выбрано · нажмите ещё раз, чтобы показать все";font-size:.86rem}
+@media (max-width:1080px){.cats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cats{grid-template-columns:minmax(0,1fr);gap:12px}.cat-media{aspect-ratio:16/7}.cat-d{display:none}}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:20px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;padding:3px;background:var(--surface)}
+.seg button{border:0;background:transparent;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:500;font-size:.92rem;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink)}
+.field-search{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:0 12px;min-height:42px;flex:1;max-width:380px;min-width:220px}
+.field-search input{border:0;background:transparent;flex:1;min-width:0;padding:8px 0}
+.field-search input:focus{outline:none}
+.field-search:focus-within{border-color:var(--brand)}
+.result-count{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{display:flex;flex-direction:column;gap:10px;padding:18px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);cursor:pointer;text-align:left;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--brand);transform:translateY(-2px)}
+.card .eyebrow{font-size:.7rem}
+.card h3{font-size:1.05rem;font-weight:600;line-height:1.3}
+.card p{color:var(--muted);font-size:.92rem;flex:1}
+.codes{display:flex;flex-wrap:wrap;gap:6px}
+.code{font-family:var(--mono);font-size:.74rem;padding:2px 7px;border-radius:4px;background:var(--brand-soft);color:var(--brand)}
+.card-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:10px;border-top:1px solid var(--line)}
+.fmt{display:flex;gap:6px;flex-wrap:wrap}
+.pill{font-size:.75rem;font-weight:600;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.pill.remote{border-color:var(--ok);color:var(--ok)}
+.more{font-size:.88rem;font-weight:600;color:var(--brand);white-space:nowrap}
+.empty{padding:40px 24px;text-align:center;border:1.5px dashed var(--line);border-radius:var(--r);color:var(--muted)}
+.empty b{display:block;color:var(--ink);margin-bottom:6px}
+
+/* Reasons */
+.reasons{background:var(--surface);border-block:1px solid var(--line)}
+.reason-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 40px;list-style:none;margin:0;padding:0}
+.reason-list li{display:grid;gap:8px;align-content:start;padding-top:16px;border-top:3px solid var(--brand)}
+.reason-list b{font-size:1.05rem;font-weight:600}
+.reason-list p{color:var(--muted);font-size:.95rem}
+@media (max-width:900px){.reason-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.reason-list{grid-template-columns:1fr}}
+
+/* Enquiry */
+.enquiry{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
+.enquiry-copy{display:grid;gap:16px}
+.enquiry-copy h2{font:700 clamp(1.5rem,3vw,2.1rem)/1.15 var(--display)}
+.enquiry-copy p{color:var(--muted)}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.checks li{display:flex;gap:10px;align-items:start}
+.checks svg{flex-shrink:0;margin-top:3px;color:var(--ok)}
+.note{background:var(--brand-soft);border-radius:8px;padding:14px 16px;font-size:.95rem}
+.note b{color:var(--brand)}
+form.card-form{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fld{display:grid;gap:6px;min-width:0}
+.fld label{font-size:.86rem;font-weight:600}
+.fld input,.fld select,.fld textarea{width:100%;min-height:46px;border:1px solid var(--line);border-radius:8px;background:var(--bg);padding:10px 12px}
+.fld textarea{min-height:84px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.fld .err{color:#C2362B;font-size:.82rem}
+.who{display:flex}
+.who .seg{width:100%}
+.who .seg button{flex:1}
+.consent{font-size:.82rem;color:var(--muted)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;line-height:1.45;cursor:pointer}
+.check input{width:20px;height:20px;margin:1px 0 0;flex-shrink:0;accent-color:var(--brand)}
+.check-wrap{display:grid;gap:6px}
+.check-wrap .err{color:#C2362B;font-size:.82rem}
+.ftr .ftr-main{color:var(--hdr-ink);font-weight:600}
+.ftr .lic{font-size:.82rem;opacity:.85}
+.ftr-legal{display:flex;flex-wrap:wrap;gap:6px 20px}
+.cookie{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:41;max-width:360px;display:grid;gap:12px;padding:16px 18px;border-radius:12px;background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:0 16px 40px -12px rgba(0,0,0,.35);font-size:.88rem;line-height:1.45}
+.cookie .btn{justify-self:start}
+@media (max-width:640px){.cookie{left:16px;right:16px;max-width:none;bottom:calc(76px + env(safe-area-inset-bottom,0px))}}
+
+.success{text-align:center;display:grid;gap:12px;justify-items:center;padding:24px 8px}
+.success .tick{width:56px;height:56px;border-radius:50%;background:var(--ok);color:var(--surface);display:grid;place-items:center}
+.success h3{font:700 1.3rem var(--display)}
+.success p{color:var(--muted);max-width:40ch}
+@media (max-width:900px){.enquiry{grid-template-columns:1fr}}
+@media (max-width:560px){.row{grid-template-columns:1fr}form.card-form{padding:20px}}
+
+/* Branches */
+.branches{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.branch{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:grid;gap:16px;align-content:start}
+.branch h3{font:700 1.2rem var(--display)}
+.branch .addr{font-size:1.02rem}
+.branch .addr small{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.contact-list{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.contact-list li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--line);flex-wrap:wrap}
+.contact-list .lbl{color:var(--muted);font-size:.86rem}
+.contact-list .val{font-weight:600;font-variant-numeric:tabular-nums;user-select:all}
+.copy{border:1px solid var(--line);background:transparent;border-radius:6px;padding:4px 10px;font-size:.8rem;cursor:pointer;color:var(--muted)}
+.copy.done{color:var(--ok);border-color:var(--ok)}
+.hours{display:flex;gap:8px;align-items:center;font-size:.92rem;color:var(--muted)}
+.hours .dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.hours .dot.open{background:var(--ok)}
+.branch-actions{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:820px){.branches{grid-template-columns:1fr}}
+
+/* Shop banner */
+.shop{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding:24px 28px;border-radius:14px;border:1.5px dashed var(--brand);margin-top:40px}
+.shop p{max-width:62ch}
+.shop b{display:block;margin-bottom:4px}
+
+/* Footer */
+.ftr{background:var(--hdr);color:var(--hdr-muted);padding-block:48px 32px;font-size:.92rem}
+.ftr-logo svg{height:58px;width:auto;display:block;margin-bottom:28px}
+.ftr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.ftr h4{margin:0 0 12px;color:var(--hdr-ink);font-size:.95rem;font-weight:600}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.ftr a{color:var(--hdr-muted);text-decoration:none}
+.ftr a:hover{color:var(--hdr-ink);text-decoration:underline}
+.ftr-bottom{margin-top:36px;padding-top:20px;border-top:1px solid color-mix(in srgb,var(--hero-ink) 18%,transparent);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.82rem}
+@media (max-width:820px){.ftr-grid{grid-template-columns:1fr}}
+
+/* Dialog */
+dialog{border:0;border-radius:16px;padding:0;max-width:620px;width:calc(100% - 32px);background:var(--surface);color:var(--ink);box-shadow:0 40px 80px -20px rgba(0,0,0,.5)}
+dialog::backdrop{background:rgba(6,18,32,.6)}
+.dlg-head{padding:24px 24px 0;display:flex;justify-content:space-between;gap:16px;align-items:start}
+.dlg-head h3{font:700 1.3rem/1.2 var(--display);margin-top:6px}
+.dlg-body{padding:16px 24px 24px;display:grid;gap:16px}
+.dlg-body p{color:var(--muted)}
+.spec{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:0;padding:16px;border-radius:10px;background:var(--bg)}
+.spec dt{color:var(--muted);font-size:.88rem}
+.spec dd{margin:0;font-weight:500}
+.dlg-actions{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:480px){.spec{grid-template-columns:1fr;gap:2px}.spec dd{margin-bottom:8px}}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--surface);padding:10px 18px;border-radius:8px;font-size:.92rem;z-index:50}
+
+
+/* Top bar: cities, phones, hours, LMS login, mandatory section */
+.topbar{background:color-mix(in srgb,var(--hdr) 80%,#000);color:var(--hdr-muted);font-size:.8rem}
+.topbar .wrap{display:flex;align-items:center;gap:4px 22px;min-height:34px;flex-wrap:wrap}
+.topbar a{color:var(--hdr-ink);text-decoration:none}
+.topbar a:hover{text-decoration:underline}
+.topbar b{color:var(--hdr-ink);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tb-city{white-space:nowrap}
+.tb-right{margin-left:auto;display:flex;gap:18px;align-items:center}
+.tb-sveden{font-weight:600}
+.tb-sveden .sm{display:none}
+@media (max-width:1000px){.tb-hours{display:none}}
+@media (max-width:760px){.tb-city2,.tb-sdo{display:none}.tb-sveden .lg{display:none}.tb-sveden .sm{display:inline}}
+
+/* Placeholder for data the centre fills in */
+.fill{background:#FFE58A;color:#3A2E00;border-radius:3px;padding:0 .25em}
+
+/* Hero numbers */
+.hero-stats{display:flex;flex-wrap:wrap;gap:14px 28px;margin:30px 0 0;padding-top:22px;border-top:1px solid color-mix(in srgb,var(--hero-ink) 18%,transparent)}
+.hero-stats div{display:grid;gap:2px}
+.hero-stats dt{font:700 1.6rem/1.1 var(--display);color:var(--hero-ink)}
+.hero-stats dd{margin:0;color:var(--hero-muted);font-size:.86rem;max-width:17ch}
+
+/* Kind-of-training tabs */
+.kinds{display:flex;gap:2px;overflow-x:auto;max-width:100%;margin-bottom:16px;scrollbar-width:thin}
+.kinds button{white-space:nowrap;flex-shrink:0}
+.cat.is-empty{opacity:.45}
+.card-meta{font-size:.82rem;color:var(--muted)}
+.card-price{font-weight:600;font-size:.95rem}
+.grid-more{display:flex;justify-content:center;margin-top:20px}
+
+/* Light band between sections */
+.band{background:var(--surface);border-block:1px solid var(--line)}
+.band .doc,.band .news-card{background:var(--bg)}
+
+/* Schedule and prices */
+.sched-wrap{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
+.sched{width:100%;border-collapse:collapse;font-size:.95rem}
+.sched th,.sched td{text-align:left;padding:13px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+.sched th{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;background:var(--bg)}
+.sched tr:last-child td{border-bottom:0}
+.sched td:first-child{font-weight:600}
+.sched td small{display:block;color:var(--muted);font-weight:400;font-size:.84rem}
+.sched td:last-child{white-space:nowrap;font-weight:600}
+.sched-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;align-items:center;margin-top:18px;color:var(--muted);font-size:.9rem}
+@media (max-width:700px){
+  .sched thead{display:none}
+  .sched tr{display:grid;grid-template-columns:auto auto 1fr;gap:4px 10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+  .sched tr:last-child{border-bottom:0}
+  .sched td{padding:0;border:0;font-size:.9rem;color:var(--muted)}
+  .sched td:nth-child(-n+2){grid-column:1/-1}
+  .sched td:first-child{color:var(--ink);font-size:1rem}
+  .sched td:nth-child(3)::before{content:"Начало "}
+  .sched td:nth-child(4)::before{content:"· "}
+  .sched td:last-child{color:var(--ink);justify-self:end}
+}
+
+/* Three steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:st}
+.steps li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;display:grid;gap:8px;align-content:start}
+.steps li::before{counter-increment:st;content:counter(st);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--signal);color:var(--signal-ink);font:700 1.1rem var(--display);margin-bottom:6px}
+.steps b{font:700 1.12rem/1.25 var(--display)}
+.steps p{color:var(--muted);font-size:.95rem}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+
+/* Formats */
+.formats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fmt-card{border-radius:14px;padding:28px;display:grid;gap:14px;align-content:start}
+.fmt-card h3{font:700 1.35rem/1.2 var(--display)}
+.fmt-card ul{margin:0;padding-left:1.1em;display:grid;gap:6px}
+.fmt-office{background:var(--surface);border:1px solid var(--line)}
+.fmt-office li{color:var(--muted)}
+.fmt-remote{background:var(--hero);color:var(--hero-ink)}
+.fmt-remote .eyebrow,.fmt-remote li{color:var(--hero-muted)}
+.fmt-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+@media (max-width:820px){.formats{grid-template-columns:1fr}.fmt-card{padding:22px}}
+
+/* Practice photos */
+.practice{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0}
+.practice figure{margin:0;border-radius:var(--r);overflow:hidden;background:var(--bg);border:1px solid var(--line)}
+.practice img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.practice figcaption{padding:12px 16px;font-weight:600;font-size:.95rem}
+.practice-note{font-size:.82rem;color:var(--muted);margin:10px 0 40px}
+@media (max-width:820px){.practice{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.practice{grid-template-columns:1fr}.practice img{aspect-ratio:16/9}}
+
+/* For companies */
+.org-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.org-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:8px;align-content:start}
+.org-item svg{width:30px;height:30px;color:var(--brand)}
+.org-item b{font-weight:600;font-size:1.02rem}
+.org-item p{color:var(--muted);font-size:.92rem}
+.kit{margin-top:16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 32px;align-items:center;padding:26px 28px;border-radius:14px;background:var(--brand-soft)}
+.kit h3{font:700 1.2rem/1.25 var(--display);margin-bottom:12px}
+.kit-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.kit-list li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.88rem}
+@media (max-width:1000px){.org-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.org-grid{grid-template-columns:1fr}.kit{grid-template-columns:1fr;padding:22px}.kit .btn{white-space:normal;text-align:center;padding-block:10px}}
+
+/* Documents */
+.docs-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.doc{display:grid;gap:10px;align-content:start;padding:22px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);color:var(--ink);text-decoration:none}
+a.doc:hover{border-color:var(--brand)}
+.doc-ico{width:42px;height:52px;border-radius:3px;border:1px solid var(--line);background:linear-gradient(var(--brand) 0 0) 8px 12px/24px 3px no-repeat,linear-gradient(var(--line) 0 0) 8px 21px/26px 2px no-repeat,linear-gradient(var(--line) 0 0) 8px 28px/22px 2px no-repeat,linear-gradient(var(--line) 0 0) 8px 35px/26px 2px no-repeat,var(--surface);box-shadow:4px 4px 0 var(--brand-soft)}
+.doc b{font-weight:600}
+.doc p{color:var(--muted);font-size:.9rem}
+@media (max-width:1000px){.docs-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.docs-grid{grid-template-columns:1fr}}
+
+/* Trust */
+.logos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.logos span{display:grid;place-items:center;height:76px;border:1.5px dashed var(--line);border-radius:var(--r);color:var(--muted);font-size:.78rem;text-align:center;padding:6px;background:var(--surface)}
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.review{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:grid;gap:14px;align-content:start}
+.review blockquote{margin:0;font-size:1.02rem;line-height:1.55;color:var(--muted);font-style:italic}
+.review .who-said{display:flex;gap:12px;align-items:center;font-size:.88rem;color:var(--muted)}
+.review .who-said i{width:40px;height:40px;border-radius:50%;background:var(--brand-soft);flex-shrink:0}
+@media (max-width:900px){.logos{grid-template-columns:repeat(3,minmax(0,1fr))}.reviews{grid-template-columns:1fr}}
+
+/* News */
+.news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.news-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
+.news-card:hover{border-color:var(--brand)}
+.news-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.news-card div{padding:16px 18px 20px;display:grid;gap:6px;align-content:start}
+.news-card time{font-size:.82rem;color:var(--muted)}
+.news-card b{font-weight:600;line-height:1.35}
+@media (max-width:900px){.news{grid-template-columns:1fr}.news-card{flex-direction:row}.news-card img{width:38%;aspect-ratio:auto;object-fit:cover}}
+@media (max-width:480px){.news-card{flex-direction:column}.news-card img{width:100%;aspect-ratio:16/9}}
+.more-link{display:inline-flex;margin-top:20px;font-weight:600;text-decoration:none}
+
+/* ===== Стили оформления: A «Сигнальный» (база), B «Чертёж», C «Ночной» ===== */
+/* B: light engineering sheet, logo blue + logo red, square corners */
+:root[data-style="b"]{
+  --bg:#F7F9FC; --surface:#FFFFFF; --ink:#0B1F3A; --muted:#5A6B82; --line:#D5DEEA;
+  --brand:#1660C4; --brand-soft:#E7EFFB; --brand-ink:#FFFFFF;
+  --hero:#EEF3FA; --hero-ink:#0B1F3A; --hero-muted:#4E6280;
+  --signal:#E63B2E; --signal-ink:#FFFFFF;
+  --hdr:#1660C4; --hdr-ink:#FFFFFF; --hdr-muted:#D4E3F8;
+  --display:"Manrope","Golos Text",system-ui,sans-serif; --r:4px;
+}
+@media (prefers-color-scheme: dark){
+  :root[data-style="b"]:not([data-theme="light"]){
+    --bg:#0A1424; --surface:#101D31; --ink:#E4ECF7; --muted:#93A3BA; --line:#22324A;
+    --brand:#5B9BEB; --brand-soft:#152A47; --brand-ink:#06111F;
+    --hero:#0D1A2E; --hero-ink:#E4ECF7; --hero-muted:#9FB0C8;
+    --signal:#FF5A4C; --signal-ink:#FFFFFF; --hdr:#123E7A; --hdr-muted:#B7CBE6;
+  }
+}
+:root[data-style="b"][data-theme="dark"]{
+  --bg:#0A1424; --surface:#101D31; --ink:#E4ECF7; --muted:#93A3BA; --line:#22324A;
+  --brand:#5B9BEB; --brand-soft:#152A47; --brand-ink:#06111F;
+  --hero:#0D1A2E; --hero-ink:#E4ECF7; --hero-muted:#9FB0C8;
+  --signal:#FF5A4C; --signal-ink:#FFFFFF; --hdr:#123E7A; --hdr-muted:#B7CBE6;
+}
+:root[data-style="b"] .hero{background-color:var(--hero);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px}
+:root[data-style="b"] .hero::after{height:3px;background:var(--signal);opacity:1}
+:root[data-style="b"] .hero h1{font-weight:800;letter-spacing:-.025em}
+:root[data-style="b"] .hero h1 em{color:var(--brand)}
+:root[data-style="b"] .section-head h2,:root[data-style="b"] .enquiry-copy h2{font-weight:800}
+:root[data-style="b"] .btn,:root[data-style="b"] .seg,:root[data-style="b"] .seg button,:root[data-style="b"] .search,:root[data-style="b"] .field-search,:root[data-style="b"] .fld input,:root[data-style="b"] .fld select,:root[data-style="b"] .fld textarea,:root[data-style="b"] .chip,:root[data-style="b"] .code,:root[data-style="b"] .pill{border-radius:3px}
+:root[data-style="b"] .search{border:1px solid var(--line);box-shadow:0 1px 0 var(--line)}
+:root[data-style="b"] .chip{background:var(--surface);border-color:var(--line)}
+:root[data-style="b"] .cert{transform:rotate(0);border-radius:2px;box-shadow:0 1px 0 var(--line),0 18px 40px -24px rgba(11,31,58,.45)}
+:root[data-style="b"] .branch,:root[data-style="b"] form.card-form,:root[data-style="b"] .shop{border-radius:6px}
+:root[data-style="b"] .reason-list li{border-top-width:2px;border-top-color:var(--signal)}
+:root[data-style="b"] .cat{border-radius:6px}
+:root[data-style="b"] .steps li::before{border-radius:3px}
+:root[data-style="b"] .fmt-remote{background:var(--brand);color:#FFFFFF}
+:root[data-style="b"] .fmt-remote .eyebrow,:root[data-style="b"] .fmt-remote li{color:#D4E3F8}
+:root[data-style="b"] .fmt-remote .btn-ghost{color:#FFFFFF}
+:root[data-style="b"] .fmt-card,:root[data-style="b"] .kit{border-radius:6px}
+:root[data-style="b"] .cat-ph{background:repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 1px,transparent 1px 22px),repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 22px),linear-gradient(160deg,var(--brand),#0B2F5C)}
+:root[data-style="b"] .cat-ph::before{background:var(--signal)}
+
+/* C: night mode, condensed signage type, red accent; a deliberately dark-only look */
+html:root[data-style="c"]{
+  --bg:#06101C; --surface:#0C1928; --ink:#EEF3F8; --muted:#8FA1B5; --line:#1B2B3F;
+  --brand:#4C8DFF; --brand-soft:#11264A; --brand-ink:#04101F;
+  --hero:#06101C; --hero-ink:#F4F7FB; --hero-muted:#9DB0C6;
+  --signal:#E63B2E; --signal-ink:#FFFFFF; --ok:#4CC28A;
+  --hdr:#06101C; --hdr-ink:#FFFFFF; --hdr-muted:#9DB0C6;
+  --display:"Oswald","Golos Text",system-ui,sans-serif; --r:14px;
+  color-scheme:dark;
+}
+:root[data-style="c"] .hero{background:radial-gradient(60% 80% at 85% 10%,rgba(76,141,255,.28),transparent 60%),radial-gradient(40% 60% at 0% 100%,rgba(230,59,46,.16),transparent 60%),var(--hero)}
+:root[data-style="c"] .hero::after{height:2px;background:linear-gradient(90deg,var(--signal),transparent 70%);opacity:1}
+:root[data-style="c"] .hero h1{font-weight:600;text-transform:uppercase;letter-spacing:.005em;font-size:clamp(1.8rem,4.2vw,3.3rem);line-height:1.04}
+:root[data-style="c"] .hero h1 em{color:var(--signal)}
+:root[data-style="c"] .section-head h2,:root[data-style="c"] .enquiry-copy h2,:root[data-style="c"] .branch h3,:root[data-style="c"] .success h3,:root[data-style="c"] .dlg-head h3{font-weight:600;text-transform:uppercase;letter-spacing:.01em}
+:root[data-style="c"] .section-head h2,:root[data-style="c"] .enquiry-copy h2{font-size:clamp(1.8rem,3.6vw,2.8rem)}
+:root[data-style="c"] .btn{border-radius:999px}
+:root[data-style="c"] .search{border-radius:999px;padding-left:10px}
+:root[data-style="c"] .search .btn{border-radius:999px}
+:root[data-style="c"] .btn-brand{background:var(--brand);color:#FFFFFF}
+:root[data-style="c"] .card,:root[data-style="c"] .cat,:root[data-style="c"] .branch,:root[data-style="c"] form.card-form{background:linear-gradient(180deg,rgba(255,255,255,.03),transparent),var(--surface)}
+:root[data-style="c"] .card:hover,:root[data-style="c"] .cat:hover{border-color:var(--signal)}
+:root[data-style="c"] .cat[aria-pressed="true"]{border-color:var(--signal);box-shadow:0 0 0 3px rgba(230,59,46,.25)}
+:root[data-style="c"] .cat-ph{background:repeating-linear-gradient(135deg,rgba(255,255,255,.04) 0 2px,transparent 2px 14px),radial-gradient(120% 90% at 85% 100%,rgba(230,59,46,.45) 0,transparent 60%),linear-gradient(160deg,#16202C,#0A0F15)}
+:root[data-style="c"] .cat-ph::before{background:var(--signal)}
+:root[data-style="c"] .cat-ph i::before{color:var(--signal)}
+:root[data-style="c"] .cat-go{color:var(--signal)}
+:root[data-style="c"] .cat b{text-transform:uppercase;letter-spacing:.01em}
+:root[data-style="c"] .steps b,:root[data-style="c"] .fmt-card h3,:root[data-style="c"] .kit h3{text-transform:uppercase;letter-spacing:.01em;font-weight:600}
+:root[data-style="c"] .fmt-remote{background:radial-gradient(80% 100% at 100% 0%,rgba(76,141,255,.3),transparent 60%),#0A1A30;border:1px solid var(--line)}
+:root[data-style="c"] .org-item svg{color:var(--signal)}
+:root[data-style="c"] .seg button[aria-pressed="true"]{background:var(--signal);color:#FFFFFF}
+:root[data-style="c"] .reason-list li{border-top-color:var(--signal)}
+:root[data-style="c"] .facts,:root[data-style="c"] .reasons{background:var(--surface)}
+:root[data-style="c"] .cert{transform:rotate(-3deg);box-shadow:0 40px 80px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.06)}
+:root[data-style="c"] .proto{background:var(--signal);color:#FFFFFF}
+:root[data-style="c"] .note{background:var(--brand-soft)}
+:root[data-style="c"] .note b{color:#FFFFFF}
+
+/* Переключатель стилей */
+.styler{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:4px;padding:5px;border-radius:12px;background:#0B1626;color:#FFFFFF;box-shadow:0 12px 30px -8px rgba(0,0,0,.5);font:500 .85rem/1 "Golos Text",system-ui,sans-serif}
+.styler-label{padding:0 8px 0 6px;color:#9DB0C6;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase}
+.styler button{display:flex;align-items:center;gap:7px;border:0;background:transparent;color:#C9D6E6;padding:8px 11px;border-radius:8px;cursor:pointer;font:inherit}
+.styler button:hover{background:rgba(255,255,255,.08);color:#FFFFFF}
+.styler button[aria-pressed="true"]{background:#FFFFFF;color:#0B1626}
+.styler .sw{width:14px;height:14px;border-radius:50%;flex-shrink:0;box-shadow:0 0 0 1.5px rgba(255,255,255,.35)}
+.styler .sw-a{background:linear-gradient(135deg,#0D3A6E 50%,#F5B800 50%)}
+.styler .sw-b{background:linear-gradient(135deg,#EEF3FA 50%,#E63B2E 50%)}
+.styler .sw-c{background:linear-gradient(135deg,#06101C 50%,#4C8DFF 50%)}
+@media (max-width:640px){.styler{left:50%;transform:translateX(-50%)}.styler .nm{display:none}.styler-label{display:none}}
+html.a11y .styler{display:none}
+</style>
+</head>
+<body>
+
+<div class="proto">Прототип новой главной страницы. Сроки, виды обучения и форматы примерные; <span class="fill">жёлтые поля</span> заполняет учебный центр.</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="tb-city">Хабаровск <b>(4212) 41-40-90</b></span>
+    <span class="tb-city tb-city2">Комсомольск-на-Амуре <b>(4217) 54-92-41</b></span>
+    <span class="tb-hours">Пн–Пт 8:30–17:30</span>
+    <span class="tb-right">
+      <a class="tb-sdo" href="#formats" data-toast="В рабочем сайте здесь вход в систему дистанционного обучения">Вход для слушателей</a>
+      <a class="tb-sveden" href="#sveden"><span class="lg">Сведения об образовательной организации</span><span class="sm">Сведения об ОО</span></a>
+    </span>
+  </div>
+</div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Учебный центр ИКЦ, на главную"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 112" role="img" aria-hidden="true" focusable="false"><g transform="translate(4 4) scale(1.0)"><polygon points="0,50 50,0 50,50" transform="translate(-3.2 -3.2)" fill="#FFFFFF"/><polygon points="50,0 100,50 50,50" transform="translate(3.2 -3.2)" fill="#FFFFFF"/><polygon points="0,50 50,100 50,50" transform="translate(-3.2 3.2)" fill="#FFFFFF"/><polygon points="50,50 100,50 50,100" transform="translate(8.7 8.7)" fill="#E63B2E"/></g><g fill="#FFFFFF" transform="translate(132 14) scale(1.22)"><g><rect x="0" y="0" width="9" height="40"/><rect x="27" y="0" width="9" height="40"/><polygon points="9,26 27,0 27,14 9,40"/></g><g transform="translate(43 0)"><rect x="0" y="0" width="9" height="40"/><polygon points="9,17 21,0 32,0 17,21 9,27"/><polygon points="14,18 33,40 22,40 9,25"/></g><g transform="translate(83 0)"><rect x="0" y="0" width="9" height="40"/><rect x="25" y="0" width="9" height="40"/><rect x="0" y="31" width="39" height="9"/><rect x="31" y="31" width="8" height="17"/></g></g><text x="133" y="93" font-family="Manrope, 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="2.3" fill="#FFFFFF">УЧЕБНЫЙ ЦЕНТР</text></svg></a>
+    <nav class="nav" id="nav" aria-label="Основное меню">
+      <a href="#catalog">Обучение</a>
+      <a href="#companies">Организациям</a>
+      <a href="#prices">Расписание и цены</a>
+      <a href="#formats">Дистанционно</a>
+      <a href="#why">О центре</a>
+      <a href="#contacts">Контакты</a>
+      <a class="nav-sveden" href="#sveden">Сведения об образовательной организации</a>
+    </nav>
+    <div class="hdr-tools">
+      <button class="icon-btn" id="a11yBtn" aria-pressed="false" title="Версия для слабовидящих" aria-label="Версия для слабовидящих">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+      </button>
+      <a class="btn btn-signal btn-sm" href="#enquiry">Оставить заявку</a>
+      <button class="icon-btn burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Меню">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Хабаровск · Комсомольск-на-Амуре · дистанционно по всей России</p>
+      <h1>Обучение и аттестация по охране труда, промышленной безопасности и <em>рабочим профессиям</em></h1>
+      <p class="hero-lead">Готовим к экзаменам Ростехнадзора, Гостехнадзора и ГАДН, вносим сведения в реестр Минтруда. Учим отдельных специалистов и целые предприятия.</p>
+      <form class="search" id="heroSearch" role="search">
+        <label for="heroQ" hidden>Найти курс</label>
+        <input id="heroQ" type="search" placeholder="Стропальщик, Б.1, электробезопасность…" autocomplete="off">
+        <button class="btn btn-brand" type="submit">Найти курс</button>
+      </form>
+      <div class="chips" aria-label="Популярные запросы">
+        <button class="chip" data-q="Охрана труда">Охрана труда</button>
+        <button class="chip" data-q="Электробезопасность">Электробезопасность</button>
+        <button class="chip" data-q="высоте">Работы на высоте</button>
+        <button class="chip" data-q="Стропальщик">Стропальщик</button>
+        <button class="chip" data-q="ДОПОГ">ДОПОГ</button>
+      </div>
+      <dl class="hero-stats">
+        <div><dt><span class="fill">__</span> лет</dt><dd>обучаем предприятия Хабаровского края</dd></div>
+        <div><dt><span class="fill">__</span> тыс.</dt><dd>слушателей получили документы</dd></div>
+        <div><dt>25+</dt><dd>программ в 6 направлениях</dd></div>
+      </dl>
+    </div>
+
+    <div class="cert" aria-label="Образец удостоверения">
+      <div class="cert-top">
+        <b>УДОСТОВЕРЕНИЕ</b>
+        <span class="mono">№ 0417-26</span>
+      </div>
+      <p class="cert-title">о проверке знаний правил работы в электроустановках</p>
+      <dl>
+        <dt>Ф. И. О.</dt><dd>Петров Иван Сергеевич</dd>
+        <dt>Должность</dt><dd>Электромонтёр</dd>
+        <dt>Группа</dt><dd><span class="mono">IV</span> до и выше 1000 В</dd>
+        <dt>Проверка</dt><dd><span class="mono">14.10.2026</span></dd>
+        <dt>Следующая</dt><dd><span class="mono">14.10.2027</span></dd>
+      </dl>
+      <div class="cert-foot">
+        <span class="sign">Председатель комиссии ________</span>
+        <span class="stamp">УЦ<br>ИКЦ<br>Хабаровск</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="Коротко о центре">
+  <div class="wrap">
+    <ul>
+      <li><b>Экзамены у надзорных органов</b><span>Гостехнадзор, ГАДН, Ростехнадзор</span></li>
+      <li><b>Реестр Минтруда России</b><span>Сведения об обучении вносим сами</span></li>
+      <li><b>Практика, а не только лекции</b><span>Альпинистская горка, манекены, сварочные посты</span></li>
+      <li><b>Дистанционный формат</b><span>Учитесь с компьютера или телефона</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="catalog">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Каталог курсов</h2>
+      <p>Выберите вид обучения и направление или найдите курс по названию профессии, области аттестации или группе допуска.</p>
+    </div>
+
+    <div class="seg kinds" id="kindSeg" role="group" aria-label="Вид обучения">
+      <button type="button" data-kind="all" aria-pressed="true">Все виды</button>
+      <button type="button" data-kind="pk" aria-pressed="false">Повышение квалификации</button>
+      <button type="button" data-kind="pp" aria-pressed="false">Переподготовка</button>
+      <button type="button" data-kind="po" aria-pressed="false">Профобучение</button>
+      <button type="button" data-kind="att" aria-pressed="false">Подготовка к аттестации</button>
+      <button type="button" data-kind="ot" aria-pressed="false">Охрана труда по ПП № 2464</button>
+    </div>
+
+    <div class="cats" id="cats" role="group" aria-label="Направления"></div>
+
+    <div class="toolbar">
+      <label class="field-search" for="q">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Поиск по курсам" autocomplete="off">
+      </label>
+      <div class="seg" role="group" aria-label="Формат обучения" id="fmtSeg">
+        <button type="button" data-fmt="all" aria-pressed="true">Все форматы</button>
+        <button type="button" data-fmt="office" aria-pressed="false">Очно</button>
+        <button type="button" data-fmt="remote" aria-pressed="false">Дистанционно</button>
+      </div>
+      <span class="result-count" id="count" aria-live="polite"></span>
+    </div>
+
+    <div class="grid" id="grid"></div>
+    <div class="grid-more" id="gridMore" hidden><button type="button" class="btn btn-ghost" id="showAll"></button></div>
+    <div class="empty" id="empty" hidden>
+      <b>Такого курса нет в каталоге</b>
+      Оставьте заявку, и методист подберёт программу или составит индивидуальную под вашу задачу.
+      <div style="margin-top:16px"><a class="btn btn-brand btn-sm" href="#enquiry">Оставить заявку</a></div>
+    </div>
+
+    <div class="shop">
+      <p><b>Памятки и инструкции по охране труда</b>Магазин технической литературы «Российская академия знаний» печатает иллюстрированные памятки под заказ или делает электронную версию для телефонов сотрудников.</p>
+      <a class="btn btn-ghost btn-sm" href="#enquiry">Заказать литературу</a>
+    </div>
+  </div>
+</section>
+
+<section class="section band" id="prices">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Ближайшие группы и цены</h2>
+      <p>Цена указана за одного слушателя. Для групп и выездного обучения считаем отдельно.</p>
+    </div>
+    <div class="sched-wrap">
+      <table class="sched">
+        <thead><tr><th>Программа</th><th>Город</th><th>Начало</th><th>Срок</th><th>Цена</th></tr></thead>
+        <tbody>
+          <tr><td>Охрана труда, программы А, Б, В<small>Обучение по ПП № 2464, запись в реестр Минтруда</small></td><td>Хабаровск и дистанционно</td><td><span class="fill">__.__</span></td><td><span class="fill">__</span> ч</td><td>от <span class="fill">____</span> ₽</td></tr>
+          <tr><td>Электробезопасность, II–V группа<small>Подготовка к проверке знаний</small></td><td>Хабаровск</td><td><span class="fill">__.__</span></td><td><span class="fill">__</span> ч</td><td>от <span class="fill">____</span> ₽</td></tr>
+          <tr><td>Работы на высоте, 1–3 группа<small>Практика на альпинистской горке</small></td><td>Хабаровск</td><td><span class="fill">__.__</span></td><td><span class="fill">__</span> ч</td><td>от <span class="fill">____</span> ₽</td></tr>
+          <tr><td>Стропальщик<small>Профобучение, свидетельство о профессии</small></td><td>Комсомольск-на-Амуре</td><td><span class="fill">__.__</span></td><td><span class="fill">__</span> ч</td><td>от <span class="fill">____</span> ₽</td></tr>
+          <tr><td>Первая помощь пострадавшим<small>Отработка навыков на манекене</small></td><td>Комсомольск-на-Амуре</td><td><span class="fill">__.__</span></td><td><span class="fill">__</span> ч</td><td>от <span class="fill">____</span> ₽</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sched-foot">
+      <span>В рабочем сайте таблица собирается из каталога автоматически: у каждой программы свои цена и даты.</span>
+      <a class="btn btn-brand btn-sm" href="#apply">Записаться в группу</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="steps">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Как проходит обучение</h2>
+      <p>От заявки до удостоверения: документы оформляем сами, вам остаётся отправить сотрудников на занятия.</p>
+    </div>
+    <ol class="steps">
+      <li><b>Заявка</b><p>Оставьте заявку на сайте или позвоните. Методист подберёт программы под должности и сроки, пришлёт договор и расписание.</p></li>
+      <li><b>Обучение</b><p>Очно в Хабаровске или Комсомольске-на-Амуре, на вашем предприятии или дистанционно. Практика на учебной базе центра.</p></li>
+      <li><b>Документы</b><p>Удостоверения и протоколы, сведения в реестре Минтруда и ФИС ФРДО, закрывающие документы для бухгалтерии.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="formats" style="padding-top:0">
+  <div class="wrap formats">
+    <article class="fmt-card fmt-office">
+      <p class="eyebrow">Очно</p>
+      <h3>В учебных классах и на практике</h3>
+      <ul>
+        <li>Два учебных центра: Хабаровск и Комсомольск-на-Амуре</li>
+        <li>Альпинистская горка, манекены, сварочные посты</li>
+        <li>Выездное обучение бригад на вашем предприятии</li>
+      </ul>
+      <div class="fmt-actions"><a class="btn btn-brand btn-sm" href="#contacts">Адреса центров</a></div>
+    </article>
+    <article class="fmt-card fmt-remote" id="remote">
+      <p class="eyebrow">Дистанционно</p>
+      <h3>Из любой точки России</h3>
+      <ul>
+        <li>Лекции и тесты в системе дистанционного обучения с компьютера или телефона</li>
+        <li>Удобный график без отрыва от работы</li>
+        <li>Документы того же образца, что и при очном обучении</li>
+      </ul>
+      <div class="fmt-actions">
+        <a class="btn btn-signal btn-sm" href="#formats" data-toast="В рабочем сайте здесь демо-доступ к системе обучения">Попробовать демо-доступ</a>
+        <a class="btn btn-ghost btn-sm" href="#formats" data-toast="В рабочем сайте здесь вход в систему дистанционного обучения">Вход для слушателей</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section reasons" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Практика, а не только лекции</h2>
+      <p>Преподаватели подготовлены на федеральном уровне, практику ведут действующие специалисты.</p>
+    </div>
+    <div class="practice">
+      <figure><img src="img/cat-ot.jpg" alt="Отработка первой помощи на манекене" loading="lazy"><figcaption>Первая помощь на манекенах</figcaption></figure>
+      <figure><img src="img/cat-work.jpg" alt="Сварщик за работой" loading="lazy"><figcaption>Сварочные посты</figcaption></figure>
+      <figure><img src="img/cat-fire.jpg" alt="Тушение огнетушителем на учебной площадке" loading="lazy"><figcaption>Учебная площадка</figcaption></figure>
+    </div>
+    <p class="practice-note">В прототипе иллюстрации. На сайте здесь будут фото занятий в ИКЦ.</p>
+    <ul class="reason-list">
+      <li><b>Высотники учатся у промальпинистов</b><p>Практика на альпинистской горке, вязание узлов, план эвакуации с высоты и разработка ППР.</p></li>
+      <li><b>Первая помощь по стандарту EFR</b><p>Инструкторы международного класса, методика Минздрава, рекомендации Красного Креста и МЧС, отработка на манекене.</p></li>
+      <li><b>ОЗП по требованиям Минтруда</b><p>Работа с газоанализаторами всех типов, эвакуация и спасение пострадавших из замкнутых пространств.</p></li>
+      <li><b>Сварка по международным стандартам</b><p>Ручная дуговая MMA, аргонодуговая TIG, полуавтомат MIG и MAG. Готовим и контролёров сварочного производства.</p></li>
+      <li><b>Защитное вождение на ваших автомобилях</b><p>70 правил защитного вождения, разбор аварийных ситуаций, психологическое тестирование водителей.</p></li>
+      <li><b>Программы под заказчика</b><p>Кроме типовых программ, составляем индивидуальные под ваше производство и графики смен.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="companies">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Организациям</h2>
+      <p>Берём на себя обучение персонала целиком: от подбора программ до напоминаний о переаттестации.</p>
+    </div>
+    <div class="org-grid">
+      <div class="org-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><b>Договор и документы</b><p>Договор, счёт, акт и закрывающие документы для бухгалтерии.</p></div>
+      <div class="org-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><b>Выезд на предприятие</b><p>Обучаем бригады на вашей площадке и по вашему графику смен.</p></div>
+      <div class="org-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><b>Напоминаем о сроках</b><p>Следим за датами повторного обучения и аттестации сотрудников и заранее предупреждаем.</p></div>
+      <div class="org-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v6c0 4 3.5 7 8 8 4.5-1 8-4 8-8V7z"/><path d="m9 12 2 2 4-4"/></svg><b>Программы под задачу</b><p>Кроме типовых, составляем программы под ваше производство и должности.</p></div>
+    </div>
+    <div class="kit">
+      <div>
+        <h3>Обязательное обучение для любого предприятия</h3>
+        <ul class="kit-list">
+          <li>Охрана труда</li><li>Первая помощь</li><li>Пожарная безопасность</li><li>ГО и ЧС</li><li>Электробезопасность</li><li>Антитеррористическая защищённость</li>
+        </ul>
+      </div>
+      <a class="btn btn-signal" href="#apply" id="kitBtn">Подобрать набор для предприятия</a>
+    </div>
+  </div>
+</section>
+
+<section class="section band" id="docs">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Документы и лицензии</h2>
+      <p>Сведения об обучении вносим в государственные реестры, проверить документ может любой работодатель.</p>
+    </div>
+    <div class="docs-grid">
+      <a class="doc" href="#sveden"><span class="doc-ico"></span><b>Лицензии на образовательную деятельность</b><p>НУ ДПО ИКЦ и АНО ДПО ИКЦ, выписки из реестра лицензий</p></a>
+      <div class="doc"><span class="doc-ico"></span><b>Реестр обученных Минтруда</b><p>Вносим сведения об обучении по охране труда по ПП № 2464</p></div>
+      <div class="doc"><span class="doc-ico"></span><b>ФИС ФРДО</b><p>Документы о повышении квалификации и переподготовке в федеральном реестре</p></div>
+      <a class="doc" href="#docs" data-toast="В рабочем сайте здесь образцы удостоверений и свидетельств"><span class="doc-ico"></span><b>Образцы документов</b><p>Удостоверения, свидетельства о профессии, протоколы</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="trust">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Нам доверяют</h2>
+      <p>Логотипы и отзывы клиентов размещаем с их разрешения.</p>
+    </div>
+    <div class="logos" aria-label="Клиенты">
+      <span>Логотип клиента</span><span>Логотип клиента</span><span>Логотип клиента</span><span>Логотип клиента</span><span>Логотип клиента</span><span>Логотип клиента</span>
+    </div>
+    <div class="reviews">
+      <figure class="review"><blockquote><span class="fill">Текст отзыва или выдержка из благодарственного письма клиента.</span></blockquote><figcaption class="who-said"><i></i><span><span class="fill">Должность, организация</span><br>Скан письма с подписью и печатью</span></figcaption></figure>
+      <figure class="review"><blockquote><span class="fill">Текст отзыва или выдержка из благодарственного письма клиента.</span></blockquote><figcaption class="who-said"><i></i><span><span class="fill">Должность, организация</span><br>Скан письма с подписью и печатью</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section band" id="news">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Жизнь центра</h2>
+      <p>Занятия, выездное обучение, изменения в требованиях. Новости центр публикует сам.</p>
+    </div>
+    <div class="news">
+      <a class="news-card" href="#news" data-toast="В рабочем сайте здесь страница новости"><img src="img/cat-energy.jpg" alt="" loading="lazy"><div><time><span class="fill">__.__.2026</span></time><b>Пример новости: проверка знаний по электробезопасности</b></div></a>
+      <a class="news-card" href="#news" data-toast="В рабочем сайте здесь страница новости"><img src="img/cat-prom.jpg" alt="" loading="lazy"><div><time><span class="fill">__.__.2026</span></time><b>Пример новости: выездное обучение на промышленной площадке</b></div></a>
+      <a class="news-card" href="#news" data-toast="В рабочем сайте здесь страница новости"><img src="img/cat-transport.jpg" alt="" loading="lazy"><div><time><span class="fill">__.__.2026</span></time><b>Пример новости: курс ДОПОГ для водителей автоцистерн</b></div></a>
+    </div>
+    <a class="more-link" href="#news" data-toast="В рабочем сайте здесь все новости">Все новости →</a>
+  </div>
+</section>
+
+<section class="section" id="apply">
+  <div class="wrap enquiry" id="enquiry">
+    <div class="enquiry-copy">
+      <p class="eyebrow">Заявка на обучение</p>
+      <h2>Пришлите задачу, мы подберём программы и посчитаем стоимость</h2>
+      <p>Методист перезвонит в рабочее время, уточнит профессии и сроки и пришлёт договор и расписание.</p>
+      <ul class="checks">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Обучение целых бригад, в том числе выездное</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Напоминаем о сроках повторной аттестации</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Закрывающие документы для бухгалтерии</li>
+      </ul>
+      <p class="note"><b>Постоянным клиентам</b> действуют специальные условия.</p>
+    </div>
+
+    <form class="card-form" id="form" novalidate>
+      <div class="who">
+        <div class="seg" role="group" aria-label="Кто обучается" id="whoSeg">
+          <button type="button" data-who="org" aria-pressed="true">Организация</button>
+          <button type="button" data-who="person" aria-pressed="false">Частное лицо</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="fld"><label for="f-name">Имя</label><input id="f-name" name="name" autocomplete="name" placeholder="Как к вам обращаться"><span class="err" hidden>Укажите имя</span></div>
+        <div class="fld"><label for="f-phone">Телефон</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 ___ ___-__-__"><span class="err" hidden>Укажите телефон, чтобы методист мог перезвонить</span></div>
+      </div>
+      <div class="row" id="orgRow">
+        <div class="fld"><label for="f-company">Организация</label><input id="f-company" name="company" autocomplete="organization" placeholder="ООО «…»"></div>
+        <div class="fld"><label for="f-people">Сколько человек обучить</label><input id="f-people" name="people" type="number" min="1" inputmode="numeric" placeholder="Например, 12"></div>
+      </div>
+      <div class="row">
+        <div class="fld"><label for="f-course">Курс</label><select id="f-course" name="course"><option value="">Не знаю, нужна консультация</option></select></div>
+        <div class="fld"><label for="f-city">Где учиться</label>
+          <select id="f-city" name="city"><option>Хабаровск</option><option>Комсомольск-на-Амуре</option><option>Дистанционно</option><option>Выезд на предприятие</option></select>
+        </div>
+      </div>
+      <div class="fld"><label for="f-msg">Комментарий</label><textarea id="f-msg" name="msg" placeholder="Профессии, сроки, удобное время для звонка"></textarea></div>
+      <div class="check-wrap">
+        <label class="check" for="f-consent"><input type="checkbox" id="f-consent" name="consent"><span>Даю <a href="#sveden">согласие на обработку персональных данных</a>. С <a href="#sveden">политикой обработки персональных данных</a> ознакомлен.</span></label>
+        <span class="err" id="consentErr" hidden>Отметьте согласие, без него заявку отправить нельзя</span>
+      </div>
+      <button class="btn btn-signal" type="submit">Отправить заявку</button>
+    </form>
+    <div class="card-form success" id="success" hidden>
+      <div class="tick"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></div>
+      <h3>Заявка принята</h3>
+      <p id="successText">Методист перезвонит в ближайшее рабочее время.</p>
+      <p class="consent">В прототипе заявка никуда не отправляется.</p>
+      <button class="btn btn-ghost btn-sm" type="button" id="again">Отправить ещё одну</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacts" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Два учебных центра</h2>
+      <p>Приезжайте на занятия или консультацию. Документы можно подать и онлайн.</p>
+    </div>
+    <div class="branches">
+      <article class="branch">
+        <h3>Хабаровск</h3>
+        <p class="addr">ул. Карла Маркса, 96А, офис 321<small>Бизнес-центр «Новый Квартал», остановка «Павленко»</small></p>
+        <p class="hours" data-open="8.5" data-close="17.5" data-lunch="13"><span class="dot"></span><span class="hours-text">Пн–Пт 8:30–17:30, обед 13:00–14:00</span></p>
+        <ul class="contact-list">
+          <li><span class="lbl">Телефон</span><span class="val">(4212) 41-40-90</span><button class="copy" data-copy="+7 (4212) 41-40-90">Скопировать</button></li>
+          <li><span class="lbl">E-mail</span><span class="val">anodpo@ikcgroup.ru</span><button class="copy" data-copy="anodpo@ikcgroup.ru">Скопировать</button></li>
+        </ul>
+        <div class="branch-actions">
+          <a class="btn btn-brand btn-sm" href="https://yandex.ru/maps/?text=%D0%A5%D0%B0%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B0%D1%80%D0%BB%D0%B0%20%D0%9C%D0%B0%D1%80%D0%BA%D1%81%D0%B0%2C%2096%D0%90" target="_blank" rel="noopener">Открыть на карте</a>
+          <a class="btn btn-ghost btn-sm" href="#enquiry" data-city="Хабаровск">Заявка в Хабаровск</a>
+        </div>
+      </article>
+      <article class="branch">
+        <h3>Комсомольск-на-Амуре</h3>
+        <p class="addr">ул. Пирогова, 1, этаж 2, офис 1<small>Методисты и бухгалтерия на месте</small></p>
+        <p class="hours" data-open="8" data-close="17" data-lunch="12"><span class="dot"></span><span class="hours-text">Пн–Пт 8:00–17:00, обед 12:00–13:00</span></p>
+        <ul class="contact-list">
+          <li><span class="lbl">Методисты</span><span class="val">(4217) 54-92-41</span><button class="copy" data-copy="+7 (4217) 54-92-41">Скопировать</button></li>
+          <li><span class="lbl">Мобильный</span><span class="val">+7 968 171-20-01</span><button class="copy" data-copy="+7 968 171-20-01">Скопировать</button></li>
+          <li><span class="lbl">Бухгалтерия</span><span class="val">(4217) 24-10-58</span><button class="copy" data-copy="+7 (4217) 24-10-58">Скопировать</button></li>
+          <li><span class="lbl">E-mail</span><span class="val">nudpo@ikcgroup.ru</span><button class="copy" data-copy="nudpo@ikcgroup.ru">Скопировать</button></li>
+        </ul>
+        <div class="branch-actions">
+          <a class="btn btn-brand btn-sm" href="https://yandex.ru/maps/?text=%D0%9A%D0%BE%D0%BC%D1%81%D0%BE%D0%BC%D0%BE%D0%BB%D1%8C%D1%81%D0%BA-%D0%BD%D0%B0-%D0%90%D0%BC%D1%83%D1%80%D0%B5%2C%20%D1%83%D0%BB.%20%D0%9F%D0%B8%D1%80%D0%BE%D0%B3%D0%BE%D0%B2%D0%B0%2C%201" target="_blank" rel="noopener">Открыть на карте</a>
+          <a class="btn btn-ghost btn-sm" href="#enquiry" data-city="Комсомольск-на-Амуре">Заявка в Комсомольск</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 112" role="img" aria-hidden="true" focusable="false"><g transform="translate(4 4) scale(1.0)"><polygon points="0,50 50,0 50,50" transform="translate(-3.2 -3.2)" fill="#FFFFFF"/><polygon points="50,0 100,50 50,50" transform="translate(3.2 -3.2)" fill="#FFFFFF"/><polygon points="0,50 50,100 50,50" transform="translate(-3.2 3.2)" fill="#FFFFFF"/><polygon points="50,50 100,50 50,100" transform="translate(8.7 8.7)" fill="#E63B2E"/></g><g fill="#FFFFFF" transform="translate(132 14) scale(1.22)"><g><rect x="0" y="0" width="9" height="40"/><rect x="27" y="0" width="9" height="40"/><polygon points="9,26 27,0 27,14 9,40"/></g><g transform="translate(43 0)"><rect x="0" y="0" width="9" height="40"/><polygon points="9,17 21,0 32,0 17,21 9,27"/><polygon points="14,18 33,40 22,40 9,25"/></g><g transform="translate(83 0)"><rect x="0" y="0" width="9" height="40"/><rect x="25" y="0" width="9" height="40"/><rect x="0" y="31" width="39" height="9"/><rect x="31" y="31" width="8" height="17"/></g></g><text x="133" y="93" font-family="Manrope, 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="2.3" fill="#FFFFFF">УЧЕБНЫЙ ЦЕНТР</text></svg></div>
+    <div class="ftr-grid">
+      <div>
+        <h4>НУ ДПО ИКЦ</h4>
+        <ul>
+          <li><a class="ftr-main" href="#sveden">Сведения об образовательной организации</a></li>
+          <li><a href="#sveden">Документы</a></li>
+          <li><a href="#sveden">Образование и программы</a></li>
+          <li><a href="#sveden">Платные образовательные услуги</a></li>
+          <li class="lic">Лицензия № ____ от ____ (выписка из реестра лицензий)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>АНО ДПО ИКЦ</h4>
+        <ul>
+          <li><a class="ftr-main" href="#sveden">Сведения об образовательной организации</a></li>
+          <li><a href="#sveden">Документы</a></li>
+          <li><a href="#sveden">Образование и программы</a></li>
+          <li><a href="#sveden">Платные образовательные услуги</a></li>
+          <li class="lic">Лицензия № ____ от ____ (выписка из реестра лицензий)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Полезные ссылки</h4>
+        <ul>
+          <li><a href="#">Министерство науки и высшего образования РФ</a></li>
+          <li><a href="#">Министерство просвещения РФ</a></li>
+          <li><a href="#">Министерство образования Хабаровского края</a></li>
+          <li><a href="#formats">Дистанционное обучение</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <span class="ftr-legal"><a href="#sveden">Политика обработки персональных данных</a><a href="#sveden">Согласие на обработку персональных данных</a></span>
+      <span>Прототип редизайна, ноябрь 2026</span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <div class="dlg-head">
+    <div><p class="eyebrow" id="dlgCat"></p><h3 id="dlgTitle"></h3></div>
+    <button class="icon-btn" id="dlgClose" aria-label="Закрыть"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="dlg-body">
+    <p id="dlgText"></p>
+    <div class="codes" id="dlgCodes"></div>
+    <dl class="spec">
+      <dt>Вид обучения</dt><dd id="dlgKind"></dd>
+      <dt>Формат</dt><dd id="dlgFmt"></dd>
+      <dt>Документ</dt><dd id="dlgDoc"></dd>
+      <dt>Экзамен</dt><dd id="dlgExam"></dd>
+      <dt>Стоимость</dt><dd>от <span class="fill">____</span> ₽ за слушателя</dd>
+      <dt>Ближайшая группа</dt><dd><span class="fill">__.__.2026</span></dd>
+    </dl>
+    <div class="dlg-actions">
+      <button class="btn btn-signal" id="dlgEnroll">Записаться на курс</button>
+      <button class="btn btn-ghost" id="dlgCancel">Вернуться к каталогу</button>
+    </div>
+  </div>
+</dialog>
+
+
+<div class="styler" role="group" aria-label="Стиль оформления">
+  <span class="styler-label">Стиль</span>
+  <button type="button" data-style="a" aria-pressed="true" title="Сигнальный"><span class="sw sw-a"></span><span>A</span><span class="nm">Сигнальный</span></button>
+  <button type="button" data-style="b" aria-pressed="false" title="Чертёж"><span class="sw sw-b"></span><span>B</span><span class="nm">Чертёж</span></button>
+  <button type="button" data-style="c" aria-pressed="false" title="Ночной"><span class="sw sw-c"></span><span>C</span><span class="nm">Ночной</span></button>
+</div>
+<div class="cookie" id="cookie" role="region" aria-label="Уведомление о cookie" hidden>
+  <p>Сайт использует cookie и Яндекс Метрику, чтобы считать посещения. Подробнее в <a href="#sveden">политике обработки персональных данных</a>.</p>
+  <button class="btn btn-brand btn-sm" type="button" id="cookieOk">Понятно</button>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+const ICONS = {
+  ot:'<path d="M3 17h18M5 17a7 7 0 0 1 14 0M12 6v4M8.5 8l1.5 3M15.5 8 14 11"/>',
+  prom:'<path d="M6 21V4h13M6 7l13-3M16 4v7M14 11h4v3h-4zM3 21h6"/>',
+  energy:'<path d="M13 3 5 14h6l-1 7 8-11h-6z"/>',
+  fire:'<path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 0-3-1-5 1-8.5z"/>',
+  transport:'<path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>',
+  work:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>'
+};
+const CATS = [
+  {id:'all', name:'Все курсы'},
+  // img: картинка направления (16:9, от 1200px, лежит рядом с файлом в img/). Если файла нет, показывается заглушка с подписью, что снять
+  {id:'ot', name:'Охрана труда и первая помощь', img:'img/cat-ot.jpg', d:'Охрана труда по программам А, Б, В, первая помощь, работы на высоте и в замкнутых пространствах, экология.', shot:'практика первой помощи на манекене'},
+  {id:'prom', name:'Промбезопасность и Ростехнадзор', img:'img/cat-prom.jpg', d:'Подготовка к аттестации в Ростехнадзоре: промышленная и энергобезопасность, лифты и подъёмники, аттракционы.', shot:'аттестация, работа с документацией на объекте'},
+  {id:'work', name:'Рабочие профессии', img:'img/cat-work.jpg', d:'Подъёмные механизмы, сварка, котлонадзор, строительство и нефтепереработка.', shot:'сварщик или стропальщик за работой'},
+  {id:'energy', name:'Электро- и теплоэнергетика', img:'img/cat-energy.jpg', d:'Электробезопасность с присвоением группы допуска, тепло- и электроэнергетика.', shot:'стенд электробезопасности, работа в СИЗ'},
+  {id:'fire', name:'Пожарная безопасность, ГО и ЧС', img:'img/cat-fire.jpg', d:'Пожарная безопасность, ГО и ЧС, антитеррористическая защищённость объектов.', shot:'тушение огнетушителем на практике'},
+  {id:'transport', name:'Транспорт и опасные грузы', img:'img/cat-transport.jpg', d:'Перевозка опасных грузов авто- и ж/д транспортом, безопасность движения, защитное вождение, самоходная техника.', shot:'водитель у машины с табличками опасного груза'}
+];
+// formats: o = очно, r = дистанционно
+const COURSES = [
+  {c:'ot', t:'Охрана труда', d:'Обучение по типовым и индивидуальным программам, профпереподготовка специалистов по охране труда.', codes:['Программы А, Б, В'], f:'or', doc:'Удостоверение, протокол, запись в реестре Минтруда', ex:'Комиссия учебного центра, сведения вносятся в реестр Минтруда'},
+  {c:'ot', t:'Первая помощь пострадавшим', d:'Инструкторы EFR, методика Минздрава, рекомендации Красного Креста и МЧС. Отработка навыков на манекене.', codes:['EFR'], f:'o', doc:'Удостоверение', ex:'Практический зачёт на манекене'},
+  {c:'ot', t:'Работы на высоте', d:'Занятия ведут промышленные альпинисты, практика на альпинистской горке. Вязание узлов, ППР, план эвакуации с высоты.', codes:['1 группа','2 группа','3 группа'], f:'o', doc:'Удостоверение о допуске к работам на высоте', ex:'Комиссия учебного центра, практика на горке'},
+  {c:'ot', t:'Работы в ограниченных и замкнутых пространствах', d:'По требованиям Минтруда. Отбор проб газовоздушной среды, эвакуация и спасение пострадавших в ОЗП.', codes:['ОЗП'], f:'o', doc:'Удостоверение', ex:'Комиссия учебного центра'},
+  {c:'ot', t:'Экологическая безопасность', d:'Повышение квалификации по типовым программам и программам заказчика.', codes:[], f:'or', doc:'Удостоверение о повышении квалификации', ex:'Итоговое тестирование'},
+  {c:'prom', t:'Промышленная безопасность', d:'Предаттестационная подготовка, профпереподготовка и повышение квалификации раз в 5 лет.', codes:['А.1','Б.1','Б.2','Б.3','Б.7','Б.8','Б.9','…Б.12'], f:'or', doc:'Удостоверение, подготовка к аттестации', ex:'Аттестация в Ростехнадзоре'},
+  {c:'prom', t:'Энергобезопасность', d:'Подготовка к аттестации, профпереподготовка и повышение квалификации.', codes:['Г1','Г2','Г3'], f:'or', doc:'Удостоверение', ex:'Аттестация в Ростехнадзоре'},
+  {c:'prom', t:'Лифты и подъёмники', d:'Подготовка персонала, обслуживающего лифты, подъёмные платформы и эскалаторы.', codes:['Лифтёр','Электромеханик'], f:'or', doc:'Удостоверение', ex:'Комиссия учебного центра'},
+  {c:'prom', t:'Аттракционы', d:'Обучение персонала, эксплуатирующего аттракционы.', codes:[], f:'or', doc:'Удостоверение', ex:'Комиссия учебного центра'},
+  {c:'energy', t:'Электробезопасность', d:'Подготовка по тестовым заданиям Ростехнадзора и повышение квалификации электротехнического персонала раз в 5 лет.', codes:['II','III','IV','V группа'], f:'or', doc:'Удостоверение о проверке знаний', ex:'Комиссия Ростехнадзора или комиссия организации'},
+  {c:'energy', t:'Теплоэнергетика', d:'Предаттестационная подготовка, профпереподготовка и повышение квалификации.', codes:[], f:'or', doc:'Удостоверение', ex:'Аттестация в Ростехнадзоре'},
+  {c:'energy', t:'Электроэнергетика', d:'Подготовка специалистов электроэнергетических объектов.', codes:[], f:'or', doc:'Удостоверение', ex:'Аттестация в Ростехнадзоре'},
+  {c:'fire', t:'Пожарная безопасность', d:'Программы повышения квалификации МЧС России, в том числе для лицензируемых видов деятельности.', codes:['МЧС'], f:'or', doc:'Удостоверение о повышении квалификации', ex:'Итоговая аттестация'},
+  {c:'fire', t:'ГО и ЧС', d:'Подготовка должностных лиц и работников в области гражданской обороны и защиты от чрезвычайных ситуаций.', codes:[], f:'or', doc:'Удостоверение', ex:'Итоговое тестирование'},
+  {c:'fire', t:'Антитеррористическая защищённость объектов', d:'Занятия по 33 видам объектов различной ведомственной принадлежности.', codes:['33 вида объектов'], f:'or', doc:'Удостоверение о повышении квалификации', ex:'Итоговое тестирование'},
+  {c:'transport', t:'Перевозка опасных грузов автотранспортом', d:'Занятия ведут консультанты ДОПОГ по иллюстрированным лекционным материалам.', codes:['ДОПОГ'], f:'o', doc:'Свидетельство ДОПОГ', ex:'Комиссия Госавтодорнадзора'},
+  {c:'transport', t:'Перевозка опасных грузов ж/д транспортом', d:'Повышение квалификации, включая погрузочно-разгрузочные работы с опасными грузами.', codes:[], f:'or', doc:'Удостоверение', ex:'Итоговая аттестация'},
+  {c:'transport', t:'Безопасность дорожного движения', d:'Подготовка специалистов по БДД, контролёров технического состояния и водителей.', codes:['БДД'], f:'or', doc:'Удостоверение', ex:'Аттестация в Госавтодорнадзоре'},
+  {c:'transport', t:'Защитное вождение', d:'70 правил защитного вождения, разбор аварийных ситуаций, психологическое тестирование, практика на автомобилях заказчика.', codes:[], f:'o', doc:'Сертификат', ex:'Практическое занятие'},
+  {c:'transport', t:'Водители самоходной техники', d:'Квадроциклы, снегоходы, погрузчики, краны на спецшасси, бульдозеры, экскаваторы, катки, грейдеры, буровые установки.', codes:['Гостехнадзор'], f:'o', doc:'Удостоверение тракториста-машиниста', ex:'Экзамен в Гостехнадзоре'},
+  {c:'work', t:'Рабочие профессии подъёмных механизмов', d:'Стропальщики, машинисты кранов всех видов, рабочие люлек, машинисты подъёмников и автовышек.', codes:['Стропальщик','Машинист крана'], f:'o', doc:'Свидетельство о профессии, удостоверение', ex:'Квалификационный экзамен'},
+  {c:'work', t:'Специалисты сварочного производства', d:'Электро- и газосварщики, резчики, контролёры сварочного производства по международным стандартам.', codes:['MMA','TIG','MIG','MAG'], f:'o', doc:'Свидетельство о профессии', ex:'Квалификационный экзамен, пробные сварные соединения'},
+  {c:'work', t:'Рабочие профессии котлонадзора', d:'Машинисты котлов, компрессоров, холодильных установок, операторы сосудов и трубопроводов.', codes:['Котлонадзор'], f:'o', doc:'Свидетельство о профессии', ex:'Квалификационный экзамен'},
+  {c:'work', t:'Рабочие профессии в строительстве', d:'Машинисты дизельных электростанций, монтажники трубопроводов и другие профессии.', codes:[], f:'o', doc:'Свидетельство о профессии', ex:'Квалификационный экзамен'},
+  {c:'work', t:'Рабочие профессии нефтепереработки', d:'Операторы АЗС и товарные операторы, машинисты оборудования нефтебаз, сливщики-разливщики.', codes:[], f:'o', doc:'Свидетельство о профессии', ex:'Квалификационный экзамен'}
+];
+// Вид обучения по курсам (примерно, сверить с учебным центром)
+const KIND_NAMES = {pk:'Повышение квалификации', pp:'Переподготовка', po:'Профобучение', att:'Подготовка к аттестации', ot:'Охрана труда по ПП № 2464'};
+const KINDS = {
+  'Охрана труда':['ot','pp'], 'Первая помощь пострадавшим':['ot'], 'Работы на высоте':['ot'], 'Работы в ограниченных и замкнутых пространствах':['ot'],
+  'Экологическая безопасность':['pk'], 'Промышленная безопасность':['att','pk','pp'], 'Энергобезопасность':['att','pk','pp'], 'Лифты и подъёмники':['po','att'],
+  'Аттракционы':['pk'], 'Электробезопасность':['att','pk'], 'Теплоэнергетика':['att','pk','pp'], 'Электроэнергетика':['pk','att'],
+  'Пожарная безопасность':['pk'], 'ГО и ЧС':['pk'], 'Антитеррористическая защищённость объектов':['pk'],
+  'Перевозка опасных грузов автотранспортом':['pk','att'], 'Перевозка опасных грузов ж/д транспортом':['pk'], 'Безопасность дорожного движения':['pp','att'],
+  'Защитное вождение':['pk'], 'Водители самоходной техники':['po'], 'Специалисты сварочного производства':['po','att']
+};
+COURSES.forEach(x => { x.k = KINDS[x.t] || ['po']; });
+const kindLabel = x => x.k.map(k => KIND_NAMES[k]).join(', ');
+const catName = id => CATS.find(c=>c.id===id).name;
+const fmtLabel = f => [f.includes('o')?'Очно':null, f.includes('r')?'Дистанционно':null].filter(Boolean);
+const plural = (n,a,b,c) => { const m10=n%10, m100=n%100; return m10===1&&m100!==11?a:(m10>=2&&m10<=4&&(m100<10||m100>=20)?b:c); };
+const esc = s => s.replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+
+const state = {cat:'all', fmt:'all', q:'', kind:'all', all:false};
+const PREVIEW = 8;
+const $ = s => document.querySelector(s);
+
+// Categories
+$('#cats').innerHTML = CATS.filter(c=>c.id!=='all').map(c => {
+  const n = COURSES.filter(x=>x.c===c.id).length;
+  const media = `<span class="cat-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[c.id]}</svg><i>${c.shot}</i></span>`
+    + (c.img ? `<img src="${c.img}" alt="" loading="lazy" onerror="this.remove()">` : '');
+  return `<button type="button" class="cat" data-cat="${c.id}" aria-pressed="false">
+    <span class="cat-media">${media}<span class="cat-n">${n} ${plural(n,'курс','курса','курсов')}</span></span>
+    <span class="cat-body"><b>${c.name}</b><span class="cat-d">${c.d}</span><span class="cat-go">Смотреть курсы →</span></span></button>`;
+}).join('');
+$('#cats').addEventListener('click', e => {
+  const b = e.target.closest('.cat'); if(!b) return;
+  state.cat = state.cat === b.dataset.cat ? 'all' : b.dataset.cat;
+  render();
+});
+
+$('#showAll').addEventListener('click', () => { state.all = true; render(); });
+
+// Kind tabs
+$('#kindSeg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if(!b) return;
+  state.kind = b.dataset.kind; render();
+});
+
+// Format filter
+$('#fmtSeg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if(!b) return;
+  state.fmt = b.dataset.fmt; render();
+});
+$('#q').addEventListener('input', e => { state.q = e.target.value; render(); });
+
+function kindFmtOk(x){
+  if(state.kind!=='all' && !x.k.includes(state.kind)) return false;
+  if(state.fmt==='office' && !x.f.includes('o')) return false;
+  if(state.fmt==='remote' && !x.f.includes('r')) return false;
+  return true;
+}
+function matches(x){
+  if(state.kind!=='all' && !x.k.includes(state.kind)) return false;
+  if(state.cat!=='all' && x.c!==state.cat) return false;
+  if(state.fmt==='office' && !x.f.includes('o')) return false;
+  if(state.fmt==='remote' && !x.f.includes('r')) return false;
+  const q = state.q.trim().toLowerCase();
+  if(q){
+    const hay = (x.t+' '+x.d+' '+x.codes.join(' ')+' '+catName(x.c)).toLowerCase();
+    return q.split(/\s+/).every(w => hay.includes(w));
+  }
+  return true;
+}
+function render(){
+  document.querySelectorAll('.cat').forEach(b => b.setAttribute('aria-pressed', b.dataset.cat===state.cat));
+  document.querySelectorAll('#fmtSeg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.fmt===state.fmt));
+  document.querySelectorAll('#kindSeg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.kind===state.kind));
+  document.querySelectorAll('.cat').forEach(b => {
+    const n = COURSES.filter(x => x.c===b.dataset.cat && kindFmtOk(x)).length;
+    b.querySelector('.cat-n').textContent = `${n} ${plural(n,'курс','курса','курсов')}`;
+    b.classList.toggle('is-empty', n===0);
+  });
+  const found = COURSES.map((x,i)=>({...x,i})).filter(matches);
+  const filtered = state.cat!=='all' || state.kind!=='all' || state.fmt!=='all' || state.q.trim();
+  const cut = !filtered && !state.all && found.length > PREVIEW;
+  const list = cut ? found.slice(0, PREVIEW) : found;
+  $('#gridMore').hidden = !cut;
+  $('#showAll').textContent = `Показать все ${found.length} ${plural(found.length,'курс','курса','курсов')}`;
+  $('#grid').innerHTML = list.map(x => `
+    <button type="button" class="card" data-i="${x.i}">
+      <span class="eyebrow">${esc(catName(x.c))}</span>
+      <h3>${esc(x.t)}</h3>
+      <p>${esc(x.d)}</p>
+      <span class="card-meta">${esc(kindLabel(x))}</span>
+      <span class="card-price">от <span class="fill">____</span> ₽</span>
+      ${x.codes.length?`<span class="codes">${x.codes.map(k=>`<span class="code">${esc(k)}</span>`).join('')}</span>`:''}
+      <span class="card-foot">
+        <span class="fmt">${fmtLabel(x.f).map(l=>`<span class="pill ${l==='Дистанционно'?'remote':''}">${l}</span>`).join('')}</span>
+        <span class="more">Подробнее →</span>
+      </span>
+    </button>`).join('');
+  $('#empty').hidden = found.length > 0;
+  $('#count').textContent = `${found.length} ${plural(found.length,'курс','курса','курсов')}`;
+}
+
+// Hero search and chips
+function searchFor(q){
+  state.q = q; state.cat = 'all'; $('#q').value = q; render();
+  document.getElementById('catalog').scrollIntoView();
+}
+$('#heroSearch').addEventListener('submit', e => { e.preventDefault(); searchFor($('#heroQ').value); });
+document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => searchFor(c.dataset.q)));
+
+// Course dialog
+const dlg = $('#dlg'); let current = null;
+$('#grid').addEventListener('click', e => {
+  const card = e.target.closest('.card'); if(!card) return;
+  const x = COURSES[+card.dataset.i]; current = x;
+  $('#dlgCat').textContent = catName(x.c);
+  $('#dlgTitle').textContent = x.t;
+  $('#dlgText').textContent = x.d;
+  $('#dlgCodes').innerHTML = x.codes.map(k=>`<span class="code">${esc(k)}</span>`).join('');
+  $('#dlgKind').textContent = kindLabel(x);
+  $('#dlgFmt').textContent = fmtLabel(x.f).map((l,i)=>i?l.toLowerCase():l).join(' или ');
+  $('#dlgDoc').textContent = x.doc;
+  $('#dlgExam').textContent = x.ex;
+  dlg.showModal();
+});
+const closeDlg = () => dlg.close();
+$('#dlgClose').addEventListener('click', closeDlg);
+$('#dlgCancel').addEventListener('click', closeDlg);
+dlg.addEventListener('click', e => { if(e.target===dlg) closeDlg(); });
+$('#dlgEnroll').addEventListener('click', () => {
+  closeDlg();
+  $('#f-course').value = current.t;
+  if(!current.f.includes('o')) $('#f-city').value = 'Дистанционно';
+  document.getElementById('apply').scrollIntoView();
+  setTimeout(()=>$('#f-name').focus({preventScroll:true}), 400);
+});
+
+// Form
+$('#f-course').insertAdjacentHTML('beforeend', COURSES.map(x=>`<option>${esc(x.t)}</option>`).join(''));
+$('#whoSeg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if(!b) return;
+  document.querySelectorAll('#whoSeg button').forEach(x => x.setAttribute('aria-pressed', x===b));
+  $('#orgRow').hidden = b.dataset.who !== 'org';
+});
+document.querySelectorAll('[data-city]').forEach(a => a.addEventListener('click', () => { $('#f-city').value = a.dataset.city; }));
+$('#form').addEventListener('submit', e => {
+  e.preventDefault();
+  let ok = true;
+  [['#f-name', v=>v.trim().length>1], ['#f-phone', v=>v.replace(/\D/g,'').length>=10]].forEach(([sel,test]) => {
+    const inp = $(sel), err = inp.nextElementSibling, good = test(inp.value);
+    err.hidden = good; inp.setAttribute('aria-invalid', !good); if(!good && ok){ inp.focus(); ok = false; }
+  });
+  const consent = $('#f-consent'), cErr = $('#consentErr');
+  cErr.hidden = consent.checked;
+  if(!consent.checked && ok){ consent.focus(); ok = false; }
+  if(!ok) return;
+  const city = $('#f-city').value;
+  $('#successText').textContent = `${$('#f-name').value.trim()}, спасибо. Методист ${city==='Комсомольск-на-Амуре'?'центра в Комсомольске-на-Амуре':'центра в Хабаровске'} перезвонит в ближайшее рабочее время.`;
+  $('#form').hidden = true; $('#success').hidden = false;
+});
+$('#f-consent').addEventListener('change', e => { if(e.target.checked) $('#consentErr').hidden = true; });
+$('#again').addEventListener('click', () => { $('#form').reset(); $('#consentErr').hidden = true; $('#orgRow').hidden=false; document.querySelectorAll('#whoSeg button').forEach(x=>x.setAttribute('aria-pressed', x.dataset.who==='org')); $('#success').hidden = true; $('#form').hidden = false; });
+
+// Copy buttons
+let toastT;
+function toast(msg){ const t=$('#toast'); t.textContent=msg; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>t.hidden=true,1800); }
+document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', () => {
+  const text = b.dataset.copy;
+  const done = () => { b.textContent='Скопировано'; b.classList.add('done'); setTimeout(()=>{b.textContent='Скопировать'; b.classList.remove('done');},1600); };
+  navigator.clipboard?.writeText(text).then(done).catch(() => {
+    const r = document.createRange(); r.selectNodeContents(b.previousElementSibling);
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast('Выделено, нажмите Ctrl+C');
+  }) ?? toast(text);
+}));
+
+// Open / closed status (Khabarovsk time, UTC+10)
+function updateHours(){
+  const now = new Date(Date.now() + 10*3600e3);
+  const day = now.getUTCDay(), h = now.getUTCHours() + now.getUTCMinutes()/60;
+  document.querySelectorAll('.hours').forEach(p => {
+    const o=+p.dataset.open, c=+p.dataset.close, l=+p.dataset.lunch;
+    const work = day>=1 && day<=5 && h>=o && h<c;
+    const lunch = work && h>=l && h<l+1;
+    const dot = p.querySelector('.dot');
+    dot.classList.toggle('open', work && !lunch);
+    p.title = work ? (lunch ? 'Сейчас обед' : 'Сейчас открыто') : 'Сейчас закрыто';
+    dot.setAttribute('aria-label', p.title);
+  });
+}
+updateHours(); setInterval(updateHours, 60000);
+
+// Accessibility mode
+$('#a11yBtn').addEventListener('click', e => {
+  const on = document.documentElement.classList.toggle('a11y');
+  e.currentTarget.setAttribute('aria-pressed', on);
+  toast(on ? 'Включена версия для слабовидящих' : 'Обычная версия');
+});
+
+// Mobile menu
+$('#burger').addEventListener('click', e => {
+  const open = $('#nav').classList.toggle('open');
+  e.currentTarget.setAttribute('aria-expanded', open);
+});
+$('#nav').addEventListener('click', e => { if(e.target.tagName==='A'){ $('#nav').classList.remove('open'); $('#burger').setAttribute('aria-expanded', false); } });
+
+
+// Style switcher: #style-a / #style-b / #style-c in the link, remembered per viewer
+const STYLES = {a:'Сигнальный', b:'Чертёж', c:'Ночной'};
+function applyStyle(st, announce){
+  if(!STYLES[st]) st = 'a';
+  if(st === 'a') delete document.documentElement.dataset.style; else document.documentElement.dataset.style = st;
+  document.querySelectorAll('.styler button').forEach(b => b.setAttribute('aria-pressed', b.dataset.style === st));
+  try{ localStorage.setItem('ikc-style', st); }catch(e){}
+  if(announce) toast('Стиль ' + st.toUpperCase() + ': ' + STYLES[st]);
+}
+function styleFromHash(){ const m = location.hash.match(/^#style-([abc])$/); return m && m[1]; }
+let savedStyle = null; try{ savedStyle = localStorage.getItem('ikc-style'); }catch(e){}
+applyStyle(styleFromHash() || savedStyle || 'a');
+window.addEventListener('hashchange', () => { const st = styleFromHash(); if(st) applyStyle(st, true); });
+document.querySelector('.styler').addEventListener('click', e => {
+  const b = e.target.closest('button'); if(!b) return;
+  applyStyle(b.dataset.style, true);
+  if(styleFromHash()) history.replaceState(null, '', '#style-' + b.dataset.style);
+});
+
+// Cookie notice, shown until dismissed
+let cookieSeen = false; try{ cookieSeen = localStorage.getItem('ikc-cookie') === '1'; }catch(e){}
+$('#cookie').hidden = cookieSeen;
+$('#cookieOk').addEventListener('click', () => { $('#cookie').hidden = true; try{ localStorage.setItem('ikc-cookie','1'); }catch(e){} });
+// Links to the mandatory section are placeholders in the prototype
+document.addEventListener('click', e => { const a = e.target.closest('[data-toast]'); if(!a) return; e.preventDefault(); toast(a.dataset.toast); });
+$('#kitBtn').addEventListener('click', () => { $('#f-msg').value = 'Нужен набор обязательного обучения для предприятия: охрана труда, первая помощь, пожарная безопасность, ГО и ЧС, электробезопасность.'; });
+document.addEventListener('click', e => { const a = e.target.closest('a[href="#sveden"]'); if(!a) return; e.preventDefault(); toast('В рабочем сайте здесь будет страница из раздела /sveden/'); });
+
+render();
+</script>
+</body>
+</html>
